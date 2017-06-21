@@ -1,5 +1,5 @@
 spring:
-  profiles: ${EUREKA_INSTANCE}
+  profile: ${EUREKA_INSTANCE}
 eureka:
   instance:
     hostname: ${EUREKA_INSTANCE}
@@ -8,7 +8,6 @@ eureka:
       defaultZone: http://${EUREKA_PEER_INSTANCE}:${EUREKA_PEER_PORT}/eureka/
     register-with-eureka: true
     fetch-registry: true
-
 logging:
   level: debug
 
