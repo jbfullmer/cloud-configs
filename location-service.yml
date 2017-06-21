@@ -1,0 +1,23 @@
+eureka:
+  client:
+    registerFetchIntervalSeconds: 5
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: ${CLOUD_EUREKA_URI},${CLOUD_EUREKA_PEER_URI}
+    healthcheck:
+      enabled: true
+  instance:
+    instanceId:
+      ${spring.application.name}:${server.port}:${random.int}
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+management:
+  security:
+    enabled: false
+
+logging.level: debug
+info:
+  port: ${server.port}

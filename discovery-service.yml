@@ -1,0 +1,14 @@
+spring:
+  profiles: ${EUREKA_INSTANCE}
+eureka:
+  instance:
+    hostname: ${EUREKA_INSTANCE}
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_PEER_INSTANCE}:${EUREKA_PEER_PORT}/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
+logging:
+  level: debug
+

@@ -1,0 +1,5 @@
+logging:
+  path: /maverik/log/${spring.application.name}.log
+  patter:
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{20} [%file:%line] - %msg%n"
+level: debug

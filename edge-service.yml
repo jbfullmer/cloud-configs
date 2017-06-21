@@ -1,0 +1,29 @@
+server:
+  port: 8765
+
+spring:
+  sleuth:
+    enable: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: false
+    fetch-registry: true
+  server:
+    registry-sync-retries: 0
+  instance:
+    hostname: edge
+
+zuul:
+  retryable: true
+
+ribbon:
+  MaxAutoRetries: 2
+  MaxAutoRetriesNextServer: 3
+  OkToRetryOnAllOperations: true
+
+management:
+  security:
+    enabled: false

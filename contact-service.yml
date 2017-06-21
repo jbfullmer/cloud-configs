@@ -1,0 +1,18 @@
+eureka:
+  client:
+    registerFetchIntervalSeconds: 5
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+     defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 9000
+
+contact-service:
+  ribbon:
+    eureka:
+      enabled: false
+management:
+  security:
+    enabled: false
