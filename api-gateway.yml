@@ -27,3 +27,6 @@ ribbon:
 management:
   security:
     enabled: false
+
+info:
+  port: $PORT
