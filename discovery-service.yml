@@ -8,6 +8,8 @@ eureka:
       defaultZone: https://${EUREKA_PEER_INSTANCE}/eureka/
     register-with-eureka: true
     fetch-registry: true
+  server:
+    enableSelfPreservation: false
 logging:
   level: debug
 
