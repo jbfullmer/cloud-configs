@@ -20,6 +20,7 @@ ribbon:
   MaxAutoRetries: 2
   MaxAutoRetriesNextServer: 3
   OkToRetryOnAllOperations: true
+  IsSecure: true
 
 management:
   security:
