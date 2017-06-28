@@ -22,6 +22,8 @@ ribbon:
   MaxAutoRetriesNextServer: 3
   OkToRetryOnAllOperations: true
   IsSecure: true
+  ConnectionTimeout: 3000
+  ReadTimeout: 120000
 
 management:
   security:
