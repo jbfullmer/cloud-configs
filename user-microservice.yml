@@ -9,6 +9,8 @@ eureka:
       enabled: true
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
+  instance:
+    securePortEnabled: false
 management:
   security:
     enabled: false
