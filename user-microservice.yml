@@ -19,3 +19,5 @@ management:
 logging.level: debug
 info:
   port: ${server.port}
+userms:
+  url: https://user-repository.herokuapp.com
