@@ -15,6 +15,10 @@ eureka:
 
 zuul:
   retryable: true
+  routes:
+    user-microservice:
+      path: /user-microservice/**
+      serviceId: user-microservice
 
 ribbon:
   MaxAutoRetries: 2
