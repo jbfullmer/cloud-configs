@@ -10,8 +10,8 @@ eureka:
     leaseRenewalIntervalInSeconds: 1
     leaseExpirationDurationInSeconds: 2
   instance:
-    securePortEnabled: false
-  hostname: mav-user-microservice.herokuapp.com
+    hostname: mav-user-microservice.herokuapp.com
+    nonSecurePort: 80
 management:
   security:
     enabled: false
@@ -21,3 +21,6 @@ info:
   port: ${server.port}
 userms:
   url: https://user-repository.herokuapp.com
+
+user-realestate.url: ${user-realestate.url}
+user-pdi.url: ${user-pdi.url}
