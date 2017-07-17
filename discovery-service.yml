@@ -5,7 +5,7 @@ eureka:
     hostname: ${EUREKA_INSTANCE}
   client:
     service-url:
-      defaultZone: https://${EUREKA_PEER_INSTANCE}/eureka/
+      defaultZone: ${EUREKA_PEER_URL}
     register-with-eureka: true
     fetch-registry: true
   server:
