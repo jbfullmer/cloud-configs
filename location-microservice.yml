@@ -1,0 +1,23 @@
+eureka:
+  client:
+    registerFetchIntervalSeconds: 5
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: ${CLOUD_EUREKA_URI},${CLOUD_EUREKA_PEER_URI}
+    healthcheck:
+      enabled: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  instance:
+    hostname: mav-user-microservice.herokuapp.com
+    nonSecurePort: 80
+management:
+  security:
+    enabled: false
+
+logging.level: debug
+info:
+  port: ${server.port}
+userms:
+  url: https://user-repository.herokuapp.com
